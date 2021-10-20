@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ITG.Entities\ITG.Entities.csproj" />
+    <ProjectReference Include="..\ITG.Shared\ITG.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
