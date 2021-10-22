@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITG.Data.Concrete
+namespace ITG.Data.Concrete.EntityFramework.Repositories
 {
-    public class CityRepository : EfEntityRepositoryBase<City>, ICityRepository
+    public class EfCityRepository : EfEntityRepositoryBase<City>, ICityRepository
     {
-        public CityRepository(DbContext context) : base(context)
+        public EfCityRepository(DbContext context) : base(context)
         {
         }
     }
