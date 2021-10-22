@@ -9,9 +9,10 @@ namespace ITG.Entities.Concrete
 {
     public class City:EntityBase,IEntity
     {
-        public int Id { get; set; }
+        
         public string Name { get; set; }
-
+        public string Content { get; set; }
+        public string Thumbnail { get; set; }
         public ICollection<Article> Articles { get; set; }
         public ICollection<Category> Categories { get; set; }
         public ICollection<Place> Places { get; set; }
