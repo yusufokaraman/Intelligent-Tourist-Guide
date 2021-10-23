@@ -16,7 +16,7 @@ namespace ITG.Data.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: @"Server = ((localdb)\Karaman; Database = ITGDb; Trusted_Connection = True; Connect Timeout = 30; MultipleActiveResultSets = True;");
+            optionsBuilder.UseSqlServer(connectionString: @"Server=(localdb)\Karaman;Database=ITGDb;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

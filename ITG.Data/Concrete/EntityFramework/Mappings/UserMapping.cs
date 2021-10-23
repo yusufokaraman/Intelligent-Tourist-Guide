@@ -30,7 +30,7 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
             builder.Property(u => u.LastName).HasMaxLength(30);
             builder.Property(u => u.Picture).IsRequired();
             builder.Property(u => u.Picture).HasMaxLength(250);
-            builder.HasOne<Role>(u => u.Role).WithMany(r => r.Users).HasForeignKey(u => u.RoleId);
+            builder.HasOne<Role>(u => u.Role).WithMany(u => u.Users).HasForeignKey(u => u.RoleId);
             builder.Property(u => u.CreatedByName).IsRequired();
             builder.Property(u => u.CreatedByName).HasMaxLength(50);
             builder.Property(u => u.ModifiedByName).IsRequired();
@@ -41,6 +41,27 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
             builder.Property(u => u.IsDeleted).IsRequired();
             builder.Property(u => u.Note).HasMaxLength(500);
             builder.ToTable("Users");
+            builder.HasData(new User
+            {
+                Id = 1,
+                RoleId = 1,
+                FirstName = "Yusuf",
+                LastName = "Karaman",
+                Username = "yusufkaraman",
+                Email = "yusufokaraman@gmail.com",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Description = "First Admin User.",
+                Note = "Administrator",
+                PasswordHash = Encoding.ASCII.GetBytes("0192023a7bbd73250516f069df18b500"),
+                Picture= "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSX4wVGjMQ37PaO4PdUVEAliSLi8-c2gJ1zvQ&usqp=CAU"
+
+
+            });
         }
     }
 }

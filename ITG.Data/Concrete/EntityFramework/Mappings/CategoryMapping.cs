@@ -27,8 +27,58 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.IsActive).IsRequired();
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
-            builder.HasOne<City>(a => a.City).WithMany(c => c.Categories).HasForeignKey(a => a.CityId);
+            builder.HasOne<City>(c => c.City).WithMany(c => c.Categories).HasForeignKey(a => a.CityId).OnDelete(DeleteBehavior.NoAction);
             builder.ToTable("Categories");
+            builder.HasData(
+                new Category
+                {
+                    Id = 1,
+                    Name = "Yemek",
+                    CityId=1,
+                    Description = "Yemek yenilebilecek yerler ile ilgili oluşturulmuş kategoridir.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Yemek Turist Rehberi Kategorisi",
+                    
+                },
+            new Category
+            {
+                Id = 2,
+                Name = "Tarihi Gezi",
+                CityId = 1,
+                Description = "Müze ve tarihsel yerler için oluşturulmuş kategoridir.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "Tarihi Gezi Turist Rehberi Kategorisi",
+
+
+            },
+            new Category
+            {
+                Id = 3,
+                Name = "Doğa Gezisi",
+                CityId = 1,
+                Description = "Doğal Parklar için oluşturulmuş kategoridir.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "Doğal Parklar Turist Rehberi Kategorisi",
+
+            }
+
+
+            );
         }
     }
 }

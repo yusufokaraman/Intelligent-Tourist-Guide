@@ -15,6 +15,9 @@ namespace ITG.Entities.Concrete
         public string PlacePicture { get; set; }
         public int CityId { get; set; }
         public City City { get; set; }
+
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         public ICollection<Article> Articles { get; set; }
         public ICollection<Comment> Comments { get; set; }
     }

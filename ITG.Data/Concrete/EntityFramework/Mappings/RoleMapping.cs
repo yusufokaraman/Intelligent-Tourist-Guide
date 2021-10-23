@@ -29,6 +29,48 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
             builder.Property(r => r.IsDeleted).IsRequired();
             builder.Property(r => r.Note).HasMaxLength(500);
             builder.ToTable("Roles");
+            builder.HasData(new Role
+            {
+                Id = 1,
+                Name = "AdminUser",
+                Description="The admin role has all the rights.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "This is Administrator."
+
+            },
+            new Role
+            {
+                Id = 2,
+                Name = "PowerUser",
+                Description = "The PowerUser has certain rights.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "This is PowerUser."
+            },
+            new Role
+            {
+                Id = 3,
+                Name = "GuestUser",
+                Description = "The GuestUser is the least privileged role class",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "This is GuestUser."
+            }
+
+            );
         }
     }
 }
