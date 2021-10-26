@@ -44,6 +44,7 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
                     ModifiedDate = DateTime.Now,
                     Note = "Yemek Turist Rehberi Kategorisi",
                     
+                    
                 },
             new Category
             {
