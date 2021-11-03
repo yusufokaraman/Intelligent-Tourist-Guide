@@ -7,6 +7,7 @@
 @if (Model.ResultStatus == ITG.Shared.Utilities.Results.ComplexTypes.ResultStatus.Success)
 {
 
+    <div id="modalPlaceHolder" aria-hidden="true"></div>
     <div class="card mb-4 mt-2">
         <div class="card-header">
             <i class="fas fa-table mr-1"></i>
@@ -69,7 +70,20 @@
         </div>
     </div>
 }
-<script>
+@if (Model.ResultStatus == ITG.Shared.Utilities.Results.ComplexTypes.ResultStatus.Error)
+{
+
+    <div class="alert alert-danger mt-3">
+
+        @Model.Message <br />
+        Dashboard sayfasına geri dönmek için <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">tıklayınız.</a>
+
+    </div>
+
+}
+@section Scripts{
+
+    <script>
         $(document).ready(function () {
             $('#categoriesTable').DataTable({
 
@@ -80,9 +94,12 @@
                 buttons: [
                     {
                         text: 'Ekle',
+                        attr: {
+                            id="btnAdd",
+                        }, 
                         className: 'btn btn-success',
                         action: function (e, dt, node, config) {
-                            alert('Ekle butonuna Basıldı.');
+
                         }
                     },
                     {
@@ -96,5 +113,64 @@
                 ]
 
             });
+            @* DataTables end here *@
+            @* Ajax GET / Getting the _CategoryAddPartial as Modal  Form starts from here *@
+            $(function () {
+                const url = '@Url.Action("Add","Category")';
+                const placeHolderDiv = $('#modalPlaceHolder');
+                $('#btnAdd').click(function () {
+                    $.get(url).done(function (data) {
+                        placeHolderDiv.html(data);
+                        placeHolderDiv.find(".modal").modal('show');
+                    });
+
+                });
+                @* Ajax GET / Getting the _CategoryAddPartial as Modal  Form ends here *@
+                @* Ajax POST / Posting the FormData  as CategoryAddDto starts from here  *@
+                placeHolderDiv.on('click',
+                    '#btnSave',
+                    function (event) {
+                        event.preventDefault();
+                        const form = $('#form-category-add');
+                        const actionUrl = form.attr('action');
+                        const dataToSend = form.serialize();
+                        $.post(actionUrl, dataToSend).done(function (data) {
+                            console.log(data);
+                            const categoryAddAjaxModel = jQuery.parseJSON(data);
+                            console.log(categoryAddAjaxModel);
+                            const newFormBody = $('.modal-body', categoryAddAjaxModel.CategoryAddPartial);
+                            placeHolderDiv.find('.modal-body').replaceWith(newFormBody);
+                            const isValid = newFormBody.find('[name="IsValid"]').val() === 'True';
+                            if (isValid) {
+
+                                placeHolderDiv.find('.modal').modal('hide');
+                                const newTableRow = `
+                             <tr>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.Id}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.Name}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.Description}n</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.CityId}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.IsActive}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.IsDeleted}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.Note}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.CreatedDate}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.CreatedByName}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedDate}</td>
+                                <td>${categoryAddAjaxModel.CategoryDto.Category.ModifiedByName}</td>
+
+                            </tr>  `;
+                                const newTableRowObject = $(newTableRow);
+                                newTableRowObject.hide();
+                                $('#categoriesTable').append(newTableRowObject);
+                                newTableRowObject.fadeIn(3500);
+                                toastr.success(`${categoryAddAjaxModel.CategoryDto.Message}`, 'Başarılı İşlem!')
+                            }
+                        });
+
+                });
+            });
         });
-</script>
+    </script>
+
+
+}

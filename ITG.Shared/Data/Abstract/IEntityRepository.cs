@@ -28,20 +28,22 @@ namespace ITG.Shared.Data.Abstract
         /// <returns></returns>
         Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> predicate=null,
             params Expression<Func<T, object>>[] includeProperties);
-        
+
         /// <summary>
         /// Gelen T tipindeki entity nesnemizi eklemek için oluşturulmuştur.
+        /// Ajax ev Jquery işlemleri için güncellenmiştir.
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task AddAsync(T entity);
+        Task<T> AddAsync(T entity);
         
         /// <summary>
         /// Update operasyonları içiçn oluşturulmuştur.
+        /// Ajax ev Jquery işlemleri için güncellenmiştir.
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task UpdateAsync(T entity);
+        Task<T> UpdateAsync(T entity);
         
         /// <summary>
         /// Delete işlemleri için oluşturulmuştur.

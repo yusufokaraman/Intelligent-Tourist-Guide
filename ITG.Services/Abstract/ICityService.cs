@@ -15,8 +15,8 @@ namespace ITG.Services.Abstract
         Task<IDataResult<CityListDto>> GetAll();
         Task<IDataResult<CityListDto>> GetAllByNonDeleted();
         Task<IDataResult<CityListDto>> GetAllByNonDeletedAndActive();
-        Task<IResult> Add(CityAddDto cityAddDto, string createdByName);
-        Task<IResult> Update(CityUpdateDto cityUpdateDto, string modifiedByName);
+        Task<IDataResult<CityDto>> Add(CityAddDto cityAddDto, string createdByName);
+        Task<IDataResult<CityDto>> Update(CityUpdateDto cityUpdateDto, string modifiedByName);
         Task<IResult> Delete(int cityId, string modifiedByName);
         Task<IResult> HardDelete(int cityId);
     }

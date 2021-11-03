@@ -21,11 +21,14 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         public async  Task<IActionResult> Index()
         {
             var result = await _cityService.GetAll();
-            if(result.ResultStatus==ResultStatus.Success)
-            {
-                return View(result.Data);
-            }
-            return View();
+            
+            return View(result.Data);
+          
+        }
+        public IActionResult Add()
+        {
+
+            return PartialView("_CityAddPartial");
         }
     }
 }
