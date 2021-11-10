@@ -1,4 +1,5 @@
-﻿@model ITG.Entities.Dtos.CityListDto
+﻿@using ITG.Shared.Utilities.Results.ComplexTypes
+@model ITG.Entities.Dtos.CityListDto
 @{
     Layout = "_Layout";
     ViewBag.Title = "Şehirler";
@@ -66,7 +67,7 @@
     </div>
 }
 @if (Model.ResultStatus == ITG.Shared.Utilities.Results.ComplexTypes.ResultStatus.Error)
-{ 
+{
     <div class="alert alert-danger mt-3">
 
         @Model.Message <br />
@@ -77,9 +78,9 @@
 
 
 }
-    @section Scripts
+@section Scripts
 {
-        <script>
+    <script>
             $(document).ready(function () {
                 $('#citiesTable').DataTable({
                     dom:
@@ -89,7 +90,9 @@
                     buttons: [
                         {
                             text: 'Ekle',
-                        
+                            attr: {
+                                id="btnAdd",
+                            },
                             className: 'btn btn-success',
                             action: function (e, dt, node, config) {
                                 alert('Ekle butonuna Basıldı.');
@@ -309,7 +312,7 @@
                     }
                 });
                 @* Datatables End Here *@
-               @* $(function () {
+                $(function () {
                     const url = '@Url.Action("Add","City")';
                     const placeHolderDiv = $('#modalPlaceHolder');
                     $('#btnAdd').click(function () {
@@ -319,8 +322,8 @@
                         });
 
                     });
-                });*@
+                });
 
             });
-        </script>
-    }
+    </script>
+}

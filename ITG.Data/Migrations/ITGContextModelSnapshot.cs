@@ -113,80 +113,6 @@ namespace ITG.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Articles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CategoryId = 1,
-                            CityId = 1,
-                            CommentCount = 1,
-                            Content = "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.",
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(557),
-                            Date = new DateTime(2021, 10, 23, 21, 20, 16, 435, DateTimeKind.Local).AddTicks(9723),
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(993),
-                            Note = "Adana Yemek Kültürü Tanıtımı",
-                            PlaceId = 1,
-                            SeoAuthor = "Yusuf Karaman",
-                            SeoDescription = "Adana Yemek Kültürü",
-                            SeoTags = "Adana, Kebap, Yemek",
-                            Thumbnail = "Default.jpg",
-                            Title = "Adana Yemek Kültürü",
-                            UserId = 1,
-                            ViewCount = 100
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CategoryId = 1,
-                            CityId = 2,
-                            CommentCount = 1,
-                            Content = "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.",
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(1965),
-                            Date = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(1963),
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(1966),
-                            Note = "Adıyaman Yemek Kültürü Tanıtımı",
-                            PlaceId = 2,
-                            SeoAuthor = "Yusuf Karaman",
-                            SeoDescription = "Adıyaman Yemek Kültürü",
-                            SeoTags = "Adıyaman, Kebap, Yemek",
-                            Thumbnail = "Default.jpg",
-                            Title = "Adıyaman Yemek Kültürü",
-                            UserId = 1,
-                            ViewCount = 100
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CategoryId = 2,
-                            CityId = 1,
-                            CommentCount = 1,
-                            Content = "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.",
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(1973),
-                            Date = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(1971),
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 436, DateTimeKind.Local).AddTicks(1974),
-                            Note = "Adana Tarihi Mekanlar Tanıtımı",
-                            PlaceId = 3,
-                            SeoAuthor = "Yusuf Karaman",
-                            SeoDescription = "Adana Tarihi Yerler",
-                            SeoTags = "Adana, Kültür,Tarih,Vanda,Kebap",
-                            Thumbnail = "Default.jpg",
-                            Title = "Adana Tarihi Yerler",
-                            UserId = 1,
-                            ViewCount = 100
-                        });
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.Category", b =>
@@ -246,12 +172,12 @@ namespace ITG.Data.Migrations
                             Id = 1,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 438, DateTimeKind.Local).AddTicks(7466),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6035),
                             Description = "Yemek yenilebilecek yerler ile ilgili oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 438, DateTimeKind.Local).AddTicks(7477),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6520),
                             Name = "Yemek",
                             Note = "Yemek Turist Rehberi Kategorisi"
                         },
@@ -260,12 +186,12 @@ namespace ITG.Data.Migrations
                             Id = 2,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 438, DateTimeKind.Local).AddTicks(7489),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6994),
                             Description = "Müze ve tarihsel yerler için oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 438, DateTimeKind.Local).AddTicks(7491),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6995),
                             Name = "Tarihi Gezi",
                             Note = "Tarihi Gezi Turist Rehberi Kategorisi"
                         },
@@ -274,12 +200,12 @@ namespace ITG.Data.Migrations
                             Id = 3,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 438, DateTimeKind.Local).AddTicks(7494),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6999),
                             Description = "Doğal Parklar için oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 438, DateTimeKind.Local).AddTicks(7495),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(7001),
                             Name = "Doğa Gezisi",
                             Note = "Doğal Parklar Turist Rehberi Kategorisi"
                         });
@@ -342,11 +268,11 @@ namespace ITG.Data.Migrations
                             Id = 1,
                             Content = "Adana, Türkiye'nin bir ili ve en kalabalık altıncı şehridir. 2019 yılı verilerine göre 2.258.718 nüfusa sahiptir. İlin yüz ölçümü 13.844 km²dir. İlde km²ye 160 kişi düşmektedir. 01.02.2018 TÜİK verilerine göre 5'i merkez ilçe olmak üzere toplam 15 ilçesi ve belediyesi vardır. Bu ilçelerde 831 mahalle bulunmaktadır.",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 440, DateTimeKind.Local).AddTicks(3454),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3295),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 440, DateTimeKind.Local).AddTicks(3464),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3305),
                             Name = "Adana",
                             Note = "01 Plakalı il Adana.",
                             Thumbnail = "Default.jpg"
@@ -356,11 +282,11 @@ namespace ITG.Data.Migrations
                             Id = 2,
                             Content = "Adıyaman, aynı isimli ilin merkez ilçesidir. Adıyaman merkez ilçesinin nüfusu 2020 istatistiklerine 310.644'dür. ",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 440, DateTimeKind.Local).AddTicks(3475),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3316),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 440, DateTimeKind.Local).AddTicks(3476),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3318),
                             Name = "Adıyaman",
                             Note = "02 Plakalı il Adıyaman.",
                             Thumbnail = "Default.jpg"
@@ -370,11 +296,11 @@ namespace ITG.Data.Migrations
                             Id = 3,
                             Content = "Afyonkarahisar veya eski ve halk arasındaki ismiyle Afyon, aynı isimli ilin merkezidir. Mermercilik ve gıda sektöründe Türkiye içinde ve dışında isim yapmıştır. Şehrin Afyon olan ismi, 2005 yılında Afyonkarahisar olarak değiştirilmiştir. ",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 440, DateTimeKind.Local).AddTicks(3480),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3321),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 440, DateTimeKind.Local).AddTicks(3481),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3323),
                             Name = "Afyon",
                             Note = "03 Plakalı il Afyon.",
                             Thumbnail = "Default.jpg"
@@ -437,53 +363,6 @@ namespace ITG.Data.Migrations
                     b.HasIndex("PlaceId");
 
                     b.ToTable("Comments");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ArticleId = 1,
-                            CityId = 1,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 442, DateTimeKind.Local).AddTicks(6128),
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 442, DateTimeKind.Local).AddTicks(6139),
-                            Note = "Adana Kebapçısı Yorumu",
-                            PlaceId = 1,
-                            Text = "Bu bir deneme yorumu olarak düşünülmüştür."
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ArticleId = 2,
-                            CityId = 2,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 442, DateTimeKind.Local).AddTicks(6150),
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 442, DateTimeKind.Local).AddTicks(6151),
-                            Note = "Adıyaman Ev Yemekleri Yorumu",
-                            PlaceId = 2,
-                            Text = "Adıyaman Ev Yemekleri üzerine deneme yorumu."
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ArticleId = 3,
-                            CityId = 1,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 442, DateTimeKind.Local).AddTicks(6155),
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 442, DateTimeKind.Local).AddTicks(6156),
-                            Note = "Adana Vanda Köprüsü Yorumu Yorumu",
-                            PlaceId = 3,
-                            Text = "Adana Vanda Köprüsü üzerine bir deneme yorumudur."
-                        });
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.Place", b =>
@@ -556,11 +435,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 1,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 444, DateTimeKind.Local).AddTicks(7749),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(573),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 444, DateTimeKind.Local).AddTicks(7759),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(584),
                             Name = "Adana Kebapçısı",
                             Note = "Adana'da yer alan kebapçı",
                             PlacePicture = "Default.jpg"
@@ -572,11 +451,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 1,
                             CityId = 2,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 444, DateTimeKind.Local).AddTicks(8184),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1160),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 444, DateTimeKind.Local).AddTicks(8185),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1162),
                             Name = "Adıyaman Ev Yemekleri",
                             Note = "Adıyaman'da faaliyer gösteren ev yemekleri restoranı.",
                             PlacePicture = "Default.jpg"
@@ -588,11 +467,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 2,
                             CityId = 3,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 444, DateTimeKind.Local).AddTicks(8189),
+                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1166),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 444, DateTimeKind.Local).AddTicks(8191),
+                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1167),
                             Name = "Adana Varda Köprüsü",
                             Note = "Adana'da bulunan tarihi Varda Köprüsü.",
                             PlacePicture = "Default.jpg"
@@ -606,86 +485,49 @@ namespace ITG.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CreatedByName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ModifiedByName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Note")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 446, DateTimeKind.Local).AddTicks(2455),
-                            Description = "The admin role has all the rights.",
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 446, DateTimeKind.Local).AddTicks(2465),
-                            Name = "AdminUser",
-                            Note = "This is Administrator."
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 446, DateTimeKind.Local).AddTicks(2475),
-                            Description = "The PowerUser has certain rights.",
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 446, DateTimeKind.Local).AddTicks(2476),
-                            Name = "PowerUser",
-                            Note = "This is PowerUser."
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 446, DateTimeKind.Local).AddTicks(2480),
-                            Description = "The GuestUser is the least privileged role class",
-                            IsActive = true,
-                            IsDeleted = false,
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 446, DateTimeKind.Local).AddTicks(2481),
-                            Name = "GuestUser",
-                            Note = "This is GuestUser."
-                        });
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.RoleClaim", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.User", b =>
@@ -695,100 +537,151 @@ namespace ITG.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CreatedByName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("NormalizedUserName")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsActive")
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("ModifiedByName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Note")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("VARBINARY(500)");
 
                     b.Property<string>("Picture")
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserClaim", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserLogin", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserRole", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "RoleId");
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("Username")
-                        .IsUnique();
+                    b.ToTable("AspNetUserRoles");
+                });
 
-                    b.ToTable("Users");
+            modelBuilder.Entity("ITG.Entities.Concrete.UserToken", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 10, 23, 21, 20, 16, 455, DateTimeKind.Local).AddTicks(5429),
-                            Description = "First Admin User.",
-                            Email = "yusufokaraman@gmail.com",
-                            FirstName = "Yusuf",
-                            IsActive = true,
-                            IsDeleted = false,
-                            LastName = "Karaman",
-                            ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 10, 23, 21, 20, 16, 455, DateTimeKind.Local).AddTicks(5440),
-                            Note = "Administrator",
-                            PasswordHash = new byte[] { 48, 49, 57, 50, 48, 50, 51, 97, 55, 98, 98, 100, 55, 51, 50, 53, 48, 53, 49, 54, 102, 48, 54, 57, 100, 102, 49, 56, 98, 53, 48, 48 },
-                            Picture = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSX4wVGjMQ37PaO4PdUVEAliSLi8-c2gJ1zvQ&usqp=CAU",
-                            RoleId = 1,
-                            Username = "yusufkaraman"
-                        });
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.Article", b =>
@@ -883,15 +776,55 @@ namespace ITG.Data.Migrations
                     b.Navigation("City");
                 });
 
-            modelBuilder.Entity("ITG.Entities.Concrete.User", b =>
+            modelBuilder.Entity("ITG.Entities.Concrete.RoleClaim", b =>
                 {
-                    b.HasOne("ITG.Entities.Concrete.Role", "Role")
-                        .WithMany("Users")
+                    b.HasOne("ITG.Entities.Concrete.Role", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserClaim", b =>
+                {
+                    b.HasOne("ITG.Entities.Concrete.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserLogin", b =>
+                {
+                    b.HasOne("ITG.Entities.Concrete.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserRole", b =>
+                {
+                    b.HasOne("ITG.Entities.Concrete.Role", null)
+                        .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Role");
+                    b.HasOne("ITG.Entities.Concrete.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ITG.Entities.Concrete.UserToken", b =>
+                {
+                    b.HasOne("ITG.Entities.Concrete.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.Article", b =>
@@ -922,11 +855,6 @@ namespace ITG.Data.Migrations
                     b.Navigation("Articles");
 
                     b.Navigation("Comments");
-                });
-
-            modelBuilder.Entity("ITG.Entities.Concrete.Role", b =>
-                {
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.User", b =>

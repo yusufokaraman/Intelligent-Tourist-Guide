@@ -1,6 +1,7 @@
 ﻿using ITG.Data.Abstract;
 using ITG.Data.Concrete;
 using ITG.Data.Concrete.EntityFramework.Contexts;
+using ITG.Entities.Concrete;
 using ITG.Services.Abstract;
 using ITG.Services.Concrete;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +21,25 @@ namespace ITG.Services.Extensions
             /// içerisinde alınır ve orada yürütülür.Tüm işlemler bittikten sonra da örnek olarak buradaki siteyle bağlantıyı kestiğimizi düşünelim.
             /// Bu durumda buradaki scope da kendisini kapatır.DbContext'imiz de bu şekilde çalıştığı için UnitOfWork yapımızı da diğer servislerimizi de bu şekilde kayıt edeceğiz.
             servicecollection.AddDbContext<ITGContext>();
+            servicecollection.AddIdentity<User, Role>(options => {
+
+                //User Password Options
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 5;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+
+                //User Username and Email Options
+
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = true;
+
+
+
+
+            }).AddEntityFrameworkStores<ITGContext>();
             servicecollection.AddScoped<IUnitOfWork, UnitOfWork>();
             servicecollection.AddScoped<ICategoryService, CategoryManager>();
             servicecollection.AddScoped<IArticleService, ArticleManager>();

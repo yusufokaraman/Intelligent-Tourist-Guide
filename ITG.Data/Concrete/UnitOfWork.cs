@@ -21,8 +21,7 @@ namespace ITG.Data.Concrete
         private EfCityRepository _cityRepository;
         private EfCommentRepository _commentRepository;
         private EfPlaceRepository _placeRepository;
-        private EfRoleRepository _roleRepository;
-        private EfUserRepository _userRepository;
+       
 
         public UnitOfWork(ITGContext context)
         {
@@ -43,9 +42,7 @@ namespace ITG.Data.Concrete
 
         public IPlaceRepository Places => _placeRepository ?? new EfPlaceRepository(_context);
 
-        public IRoleRepository Roles => _roleRepository ?? new EfRoleRepository(_context);
-
-        public IUserRepository Users => _userRepository ?? new EfUserRepository(_context);
+        
 
         /// <summary>
         /// Context imizin asenkron bir şekilde Dispose edilebilmesi için IUnitOfWork'te IDisposable yerine IAsyncDisposable değişikliği yapılmıştır.

@@ -1,4 +1,5 @@
-﻿@model ITG.Entities.Dtos.CategoryListDto
+﻿@using ITG.Shared.Utilities.Results.ComplexTypes
+@model ITG.Entities.Dtos.CategoryListDto
 @{
     Layout = "_Layout";
     ViewBag.Title = "Kategoriler";
@@ -96,7 +97,7 @@
                         text: 'Ekle',
                         attr: {
                             id="btnAdd",
-                        }, 
+                        },
                         className: 'btn btn-success',
                         action: function (e, dt, node, config) {
 

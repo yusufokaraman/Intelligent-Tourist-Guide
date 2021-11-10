@@ -1,18 +1,18 @@
 ﻿using ITG.Data.Concrete.EntityFramework.Mappings;
 using ITG.Entities.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ITG.Data.Concrete.EntityFramework.Contexts
 {
-    public class ITGContext : DbContext
+    public class ITGContext : IdentityDbContext<User,Role,int,UserClaim,UserRole,UserLogin,RoleClaim,UserToken>
     {
         public DbSet<Article> Articles { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Place> Places { get; set; }
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<User> Users { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,6 +28,12 @@ namespace ITG.Data.Concrete.EntityFramework.Contexts
             modelBuilder.ApplyConfiguration(new PlaceMapping());
             modelBuilder.ApplyConfiguration(new RoleMapping());
             modelBuilder.ApplyConfiguration(new UserMapping());
+            modelBuilder.ApplyConfiguration(new UserRoleMapping());
+            modelBuilder.ApplyConfiguration(new UserTokenMapping());
+            modelBuilder.ApplyConfiguration(new UserLoginMapping());
+            modelBuilder.ApplyConfiguration(new UserClaimMapping());
+            modelBuilder.ApplyConfiguration(new RoleClaimMapping());
+            
 
         }
 

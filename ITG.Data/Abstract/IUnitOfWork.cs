@@ -17,8 +17,7 @@ namespace ITG.Data.Abstract
         ICityRepository Cities { get; }
         ICommentRepository Comments { get; }
         IPlaceRepository Places { get; }
-        IRoleRepository Roles { get; }
-        IUserRepository Users { get; }//_unitOfork.Users.AddAsync();
+        
         Task<int> SaveAsync();
 
     }
