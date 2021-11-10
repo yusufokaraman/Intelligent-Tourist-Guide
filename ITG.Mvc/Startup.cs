@@ -1,3 +1,4 @@
+using ITG.Mvc.AutoMapper.Profiles;
 using ITG.Services.AutoMapper.Profiles;
 using ITG.Services.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -27,7 +28,7 @@ namespace ITG.Mvc
 
             });
             services.AddSession();
-            services.AddAutoMapper(typeof(CityProfile), typeof(CategoryProfile), typeof(ArticleProfile), typeof(PlaceProfile));
+            services.AddAutoMapper(typeof(CityProfile), typeof(CategoryProfile), typeof(ArticleProfile), typeof(PlaceProfile),typeof(UserProfile));
             services.LoadMyServices();
             services.ConfigureApplicationCookie(options =>
             {
