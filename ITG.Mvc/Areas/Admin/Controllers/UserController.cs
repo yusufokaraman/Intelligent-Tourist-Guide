@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ITG.Mvc.Areas.Admin.Controllers
@@ -43,6 +44,27 @@ namespace ITG.Mvc.Areas.Admin.Controllers
                 ResultStatus = ResultStatus.Success
 
             });
+        }
+
+
+        /// <summary>
+        /// Yenile butonu için oluşturulmuş bir metottur. 
+        /// </summary>
+        /// <returns>userListDto</returns>
+        [HttpGet]
+        public async Task<JsonResult> GetAllUsers()
+        {
+            var users = await _userManager.Users.ToListAsync();
+            var userListDto=JsonSerializer.Serialize(new UserListDto
+            {
+                Users = users,
+                ResultStatus = ResultStatus.Success
+
+            }, new JsonSerializerOptions { 
+            
+                ReferenceHandler=ReferenceHandler.Preserve
+            });
+            return Json(userListDto);
         }
 
         /// <summary>
