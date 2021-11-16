@@ -13,6 +13,8 @@ namespace ITG.Mvc.AutoMapper.Profiles
         public UserProfile()
         {
             CreateMap<UserAddDto, User>();
+            CreateMap<User, UserUpdateDto>();
+            CreateMap<UserUpdateDto, User>();
         }
     }
 }
