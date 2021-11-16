@@ -3,6 +3,7 @@ using ITG.Mvc.Areas.Admin.Models;
 using ITG.Services.Abstract;
 using ITG.Shared.Utilities.Extensions;
 using ITG.Shared.Utilities.Results.ComplexTypes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace ITG.Mvc.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;

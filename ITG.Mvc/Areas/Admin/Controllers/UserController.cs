@@ -4,6 +4,7 @@ using ITG.Entities.Dtos;
 using ITG.Mvc.Areas.Admin.Models;
 using ITG.Shared.Utilities.Extensions;
 using ITG.Shared.Utilities.Results.ComplexTypes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -23,19 +24,20 @@ namespace ITG.Mvc.Areas.Admin.Controllers
     public class UserController : Controller
     {
         private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
         private readonly IWebHostEnvironment _env;
         private readonly IMapper _mapper;
 
 
 
-        public UserController(UserManager<User> userManager,  IWebHostEnvironment env, IMapper mapper)
+        public UserController(UserManager<User> userManager, IWebHostEnvironment env, IMapper mapper, SignInManager<User> signInManager)
         {
             _userManager = userManager;
             _env = env;
             _mapper = mapper;
-           
+            _signInManager = signInManager;
         }
-
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var users = await _userManager.Users.ToListAsync();
@@ -47,23 +49,64 @@ namespace ITG.Mvc.Areas.Admin.Controllers
             });
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View("UserLogin");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(UserLoginDto userLoginDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(userLoginDto.Email);
+                if (user != null)
+                {
+                    var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password,
+                        userLoginDto.RememberMe, false);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "E-mail veya şifreniz yanlış!");
+                        return View("UserLogin");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "E-mail veya şifreniz yanlış!");
+                    return View("UserLogin");
+                }
+            }
+            else
+            {
+                return View("UserLogin");
+            }
+            
+        }
+
 
         /// <summary>
         /// Yenile butonu için oluşturulmuş bir metottur. 
         /// </summary>
         /// <returns>userListDto</returns>
+        [Authorize]
         [HttpGet]
         public async Task<JsonResult> GetAllUsers()
         {
             var users = await _userManager.Users.ToListAsync();
-            var userListDto=JsonSerializer.Serialize(new UserListDto
+            var userListDto = JsonSerializer.Serialize(new UserListDto
             {
                 Users = users,
                 ResultStatus = ResultStatus.Success
 
-            }, new JsonSerializerOptions { 
-            
-                ReferenceHandler=ReferenceHandler.Preserve
+            }, new JsonSerializerOptions
+            {
+
+                ReferenceHandler = ReferenceHandler.Preserve
             });
             return Json(userListDto);
         }
@@ -72,6 +115,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// Kullanıcı Ekleme için Oluşturulan PartialView
         /// </summary>
         /// <returns>"_UserAddPartial"</returns>
+        [Authorize]
         [HttpGet]
         public IActionResult Add()
         {
@@ -83,13 +127,14 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userAddDto"></param>
         /// <returns>userAddAjaxModel</returns>
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Add(UserAddDto userAddDto)
         {
             if (ModelState.IsValid)
             {
-                userAddDto.Picture = await ImageUpload(userAddDto.UserName,userAddDto.PictureFile);
-                var user= _mapper.Map<User>(userAddDto);
+                userAddDto.Picture = await ImageUpload(userAddDto.UserName, userAddDto.PictureFile);
+                var user = _mapper.Map<User>(userAddDto);
                 var result = await _userManager.CreateAsync(user, userAddDto.Password);
                 if (result.Succeeded)
                 {
@@ -109,7 +154,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
-                        ModelState.AddModelError("",error.Description);
+                        ModelState.AddModelError("", error.Description);
                     }
                     var userAddAjaxErrorModel = JsonSerializer.Serialize(new UserAddAjaxViewModel
                     {
@@ -118,7 +163,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
                     });
                     return Json(userAddAjaxErrorModel);
                 }
-               
+
 
             }
             var userAddAjaxModelStateErrorModel = JsonSerializer.Serialize(new UserAddAjaxViewModel
@@ -135,6 +180,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
+        [Authorize]
         public async Task<JsonResult> Delete(int userId)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
@@ -170,6 +216,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userId"></param>
         /// <returns>_UserUpdatePartial</returns>
+        [Authorize]
         [HttpGet]
         public async Task<PartialViewResult> Update(int userId)
         {
@@ -183,6 +230,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userUpdateDto"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Update(UserUpdateDto userUpdateDto)
         {
@@ -191,9 +239,9 @@ namespace ITG.Mvc.Areas.Admin.Controllers
                 bool isNewPictureUploaded = false;
                 var oldUser = await _userManager.FindByIdAsync(userUpdateDto.Id.ToString());
                 var oldUserPicture = oldUser.Picture;
-                if (userUpdateDto.PictureFile!=null)
+                if (userUpdateDto.PictureFile != null)
                 {
-                    userUpdateDto.Picture = await  ImageUpload(userUpdateDto.UserName, userUpdateDto.PictureFile);
+                    userUpdateDto.Picture = await ImageUpload(userUpdateDto.UserName, userUpdateDto.PictureFile);
                     isNewPictureUploaded = true;
                 }
                 var updatedUser = _mapper.Map<UserUpdateDto, User>(userUpdateDto, oldUser);
@@ -224,7 +272,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
                     }
                     var userUpdateErrorViewModel = JsonSerializer.Serialize(new UserUpdateAjaxViewModel
                     {
-                        UserUpdateDto=userUpdateDto,
+                        UserUpdateDto = userUpdateDto,
                         UserUpdatePartial = await this.RenderViewToStringAsync("_UserUpdatePartial", userUpdateDto)
                     });
                     return Json(userUpdateErrorViewModel);
@@ -248,6 +296,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userAddDto"></param>
         /// <returns>fileName</returns>
+        [Authorize]
         public async Task<string> ImageUpload(string userName, IFormFile pictureFile)
         {
             //Bu işlem bize string olarak wwwroot dosya yolunu dinamik bir şekilde verecektir.
@@ -269,9 +318,10 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="pictureName"></param>
         /// <returns> true or false</returns>
+        [Authorize]
         public bool ImageDelete(string pictureName)
         {
-            
+
             string wwwroot = _env.WebRootPath;
             var fileToDelete = Path.Combine($"{wwwroot}/img", pictureName);
             if (System.IO.File.Exists(fileToDelete))
