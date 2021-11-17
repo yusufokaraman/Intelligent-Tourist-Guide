@@ -172,12 +172,12 @@ namespace ITG.Data.Migrations
                             Id = 1,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6035),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(6983),
                             Description = "Yemek yenilebilecek yerler ile ilgili oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6520),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7457),
                             Name = "Yemek",
                             Note = "Yemek Turist Rehberi Kategorisi"
                         },
@@ -186,12 +186,12 @@ namespace ITG.Data.Migrations
                             Id = 2,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6994),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7919),
                             Description = "Müze ve tarihsel yerler için oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6995),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7920),
                             Name = "Tarihi Gezi",
                             Note = "Tarihi Gezi Turist Rehberi Kategorisi"
                         },
@@ -200,12 +200,12 @@ namespace ITG.Data.Migrations
                             Id = 3,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(6999),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7925),
                             Description = "Doğal Parklar için oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 806, DateTimeKind.Local).AddTicks(7001),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7926),
                             Name = "Doğa Gezisi",
                             Note = "Doğal Parklar Turist Rehberi Kategorisi"
                         });
@@ -268,11 +268,11 @@ namespace ITG.Data.Migrations
                             Id = 1,
                             Content = "Adana, Türkiye'nin bir ili ve en kalabalık altıncı şehridir. 2019 yılı verilerine göre 2.258.718 nüfusa sahiptir. İlin yüz ölçümü 13.844 km²dir. İlde km²ye 160 kişi düşmektedir. 01.02.2018 TÜİK verilerine göre 5'i merkez ilçe olmak üzere toplam 15 ilçesi ve belediyesi vardır. Bu ilçelerde 831 mahalle bulunmaktadır.",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3295),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4132),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3305),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4145),
                             Name = "Adana",
                             Note = "01 Plakalı il Adana.",
                             Thumbnail = "Default.jpg"
@@ -282,11 +282,11 @@ namespace ITG.Data.Migrations
                             Id = 2,
                             Content = "Adıyaman, aynı isimli ilin merkez ilçesidir. Adıyaman merkez ilçesinin nüfusu 2020 istatistiklerine 310.644'dür. ",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3316),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4157),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3318),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4158),
                             Name = "Adıyaman",
                             Note = "02 Plakalı il Adıyaman.",
                             Thumbnail = "Default.jpg"
@@ -296,11 +296,11 @@ namespace ITG.Data.Migrations
                             Id = 3,
                             Content = "Afyonkarahisar veya eski ve halk arasındaki ismiyle Afyon, aynı isimli ilin merkezidir. Mermercilik ve gıda sektöründe Türkiye içinde ve dışında isim yapmıştır. Şehrin Afyon olan ismi, 2005 yılında Afyonkarahisar olarak değiştirilmiştir. ",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3321),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4162),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 809, DateTimeKind.Local).AddTicks(3323),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4163),
                             Name = "Afyon",
                             Note = "03 Plakalı il Afyon.",
                             Thumbnail = "Default.jpg"
@@ -435,11 +435,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 1,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(573),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 110, DateTimeKind.Local).AddTicks(9904),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(584),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 110, DateTimeKind.Local).AddTicks(9921),
                             Name = "Adana Kebapçısı",
                             Note = "Adana'da yer alan kebapçı",
                             PlacePicture = "Default.jpg"
@@ -451,11 +451,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 1,
                             CityId = 2,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1160),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(370),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1162),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(371),
                             Name = "Adıyaman Ev Yemekleri",
                             Note = "Adıyaman'da faaliyer gösteren ev yemekleri restoranı.",
                             PlacePicture = "Default.jpg"
@@ -467,11 +467,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 2,
                             CityId = 3,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1166),
+                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(375),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 10, 7, 9, 5, 814, DateTimeKind.Local).AddTicks(1167),
+                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(376),
                             Name = "Adana Varda Köprüsü",
                             Note = "Adana'da bulunan tarihi Varda Köprüsü.",
                             PlacePicture = "Default.jpg"
@@ -505,6 +505,22 @@ namespace ITG.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ConcurrencyStamp = "8d8ba6de-af72-4172-b1ec-48e2214d33c7",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ConcurrencyStamp = "2a653dd7-a6ae-4470-a972-dbd6b5a4598c",
+                            Name = "PoweUser",
+                            NormalizedName = "POWERUSER"
+                        });
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.RoleClaim", b =>
@@ -600,6 +616,44 @@ namespace ITG.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "fe0f8182-a2fc-435e-81c2-dd27acd5614d",
+                            Email = "adminuser@kocaeli.edu.tr",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMINUSER@KOCAELI.EDU.TR",
+                            NormalizedUserName = "ADMINUSER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMrE24mzf6KQNbdW0uJmtoEl1UqxdS1nRJMyI2c0DtN5vp+rhIRw84HI1+D17OOiEA==",
+                            PhoneNumber = "+905553332211",
+                            PhoneNumberConfirmed = true,
+                            Picture = "defaultUser.png",
+                            SecurityStamp = "e7f4362a-2dd3-4e92-93ce-9d44b591efb8",
+                            TwoFactorEnabled = false,
+                            UserName = "adminuser"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "ddde49dd-430b-4cf5-bf45-6197af6f6b42",
+                            Email = "poweruser@kocaeli.edu.tr",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "POWERUSER@KOCAELI.EDU.TR",
+                            NormalizedUserName = "POWERUSER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOYbaDMaxpgndE5EL+G9M0kfdRlWFk4zmhm3BOcF1cRKjlTAm4+fThA5gFk7oRFxaQ==",
+                            PhoneNumber = "+905553332211",
+                            PhoneNumberConfirmed = true,
+                            Picture = "defaultUser.png",
+                            SecurityStamp = "522e28a7-96c0-4af9-8704-f8dc3079414f",
+                            TwoFactorEnabled = false,
+                            UserName = "poweruser"
+                        });
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.UserClaim", b =>
@@ -661,6 +715,18 @@ namespace ITG.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            RoleId = 2
+                        });
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.UserToken", b =>

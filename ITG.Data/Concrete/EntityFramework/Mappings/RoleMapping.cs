@@ -37,6 +37,23 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
 
             // Each Role can have many associated RoleClaims
             builder.HasMany<RoleClaim>().WithOne().HasForeignKey(rc => rc.RoleId).IsRequired();
+
+            builder.HasData(
+                new Role
+                {
+                    Id = 1,
+                    Name = "Admin",
+                    NormalizedName = "ADMIN",
+                    ConcurrencyStamp = Guid.NewGuid().ToString()
+                },
+                new Role
+                {
+                    Id = 2,
+                    Name = "PoweUser",
+                    NormalizedName = "POWERUSER",
+                    ConcurrencyStamp = Guid.NewGuid().ToString()
+                }
+                );
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ITG.Entities.Concrete;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -50,6 +51,47 @@ namespace ITG.Data.Concrete.EntityFramework.Mappings
 
             // Each User can have many entries in the UserRole join table
             builder.HasMany<UserRole>().WithOne().HasForeignKey(ur => ur.UserId).IsRequired();
+
+            var adminUser = new User
+            {
+                Id=1,
+                UserName="adminuser",
+                NormalizedUserName="ADMINUSER",
+                Email="adminuser@kocaeli.edu.tr",
+                NormalizedEmail="ADMINUSER@KOCAELI.EDU.TR",
+                PhoneNumber="+905553332211",
+                Picture="defaultUser.png",
+                EmailConfirmed=true,
+                PhoneNumberConfirmed=true,
+                SecurityStamp= Guid.NewGuid().ToString()
+
+
+            };
+            adminUser.PasswordHash = CreatePasswordHash(adminUser,"poweruser");
+            var powerUser = new User
+            {
+                Id = 2,
+                UserName = "poweruser",
+                NormalizedUserName = "POWERUSER",
+                Email = "poweruser@kocaeli.edu.tr",
+                NormalizedEmail = "POWERUSER@KOCAELI.EDU.TR",
+                PhoneNumber = "+905553332211",
+                Picture = "defaultUser.png",
+                EmailConfirmed = true,
+                PhoneNumberConfirmed = true,
+                SecurityStamp = Guid.NewGuid().ToString()
+
+
+            };
+            powerUser.PasswordHash = CreatePasswordHash(powerUser, "poweruser");
+
+
+            builder.HasData(adminUser, powerUser);
+        }
+        private string CreatePasswordHash(User user,string password)
+        {
+            var passwordHasher = new PasswordHasher<User>();
+            return passwordHasher.HashPassword(user, password);
         }
     }
 }

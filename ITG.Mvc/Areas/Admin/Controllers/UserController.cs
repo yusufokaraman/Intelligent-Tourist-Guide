@@ -37,7 +37,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
             _mapper = mapper;
             _signInManager = signInManager;
         }
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Index()
         {
             var users = await _userManager.Users.ToListAsync();
@@ -63,8 +63,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
                 var user = await _userManager.FindByEmailAsync(userLoginDto.Email);
                 if (user != null)
                 {
-                    var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password,
-                        userLoginDto.RememberMe, false);
+                    var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, userLoginDto.RememberMe, false);
                     if (result.Succeeded)
                     {
                         return RedirectToAction("Index", "Home");
@@ -85,7 +84,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
             {
                 return View("UserLogin");
             }
-            
+
         }
 
 
@@ -93,7 +92,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// Yenile butonu için oluşturulmuş bir metottur. 
         /// </summary>
         /// <returns>userListDto</returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<JsonResult> GetAllUsers()
         {
@@ -115,7 +114,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// Kullanıcı Ekleme için Oluşturulan PartialView
         /// </summary>
         /// <returns>"_UserAddPartial"</returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Add()
         {
@@ -127,7 +126,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userAddDto"></param>
         /// <returns>userAddAjaxModel</returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Add(UserAddDto userAddDto)
         {
@@ -174,13 +173,22 @@ namespace ITG.Mvc.Areas.Admin.Controllers
             return Json(userAddAjaxModelStateErrorModel);
 
         }
+        /// <summary>
+        /// This is the 403 Error method. 
+        /// </summary>
+        /// <returns>AccessDenied.cshtml</returns>
+        [HttpGet]
+        public ViewResult AccessDenied()
+        {
+            return View();
+        }
 
         /// <summary>
         /// This is Delete method for the users.
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<JsonResult> Delete(int userId)
         {
             var user = await _userManager.FindByIdAsync(userId.ToString());
@@ -216,7 +224,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userId"></param>
         /// <returns>_UserUpdatePartial</returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<PartialViewResult> Update(int userId)
         {
@@ -230,7 +238,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userUpdateDto"></param>
         /// <returns></returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Update(UserUpdateDto userUpdateDto)
         {
@@ -296,7 +304,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="userAddDto"></param>
         /// <returns>fileName</returns>
-        [Authorize]
+        [Authorize(Roles = "Admin,PowerUser")]
         public async Task<string> ImageUpload(string userName, IFormFile pictureFile)
         {
             //Bu işlem bize string olarak wwwroot dosya yolunu dinamik bir şekilde verecektir.
@@ -318,7 +326,7 @@ namespace ITG.Mvc.Areas.Admin.Controllers
         /// </summary>
         /// <param name="pictureName"></param>
         /// <returns> true or false</returns>
-        [Authorize]
+        [Authorize(Roles = "Admin,PowerUser")]
         public bool ImageDelete(string pictureName)
         {
 

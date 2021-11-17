@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace ITG.Mvc.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin,PowerUser")]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;
