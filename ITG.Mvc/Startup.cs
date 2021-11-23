@@ -1,6 +1,7 @@
 using ITG.Mvc.AutoMapper.Profiles;
 using ITG.Services.AutoMapper.Profiles;
 using ITG.Services.Extensions;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -30,13 +31,14 @@ namespace ITG.Mvc
             services.AddSession();
             services.AddAutoMapper(typeof(CityProfile), typeof(CategoryProfile), typeof(ArticleProfile), typeof(PlaceProfile),typeof(UserProfile));
             services.LoadMyServices();
+            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = new PathString("/Admin/User/Login");
                 options.LogoutPath = new PathString("/Admin/User/Logout");
                 options.Cookie = new CookieBuilder
                 {
-                    Name="Tourist Guide",
+                    Name="ITGDb",
                     HttpOnly=true,
                     SameSite=SameSiteMode.Strict,
                     SecurePolicy=CookieSecurePolicy.SameAsRequest//Test aþamasýnda olduðumdan bu þekilde býrakýldý,Always e çevrilecek.

@@ -336,8 +336,8 @@ namespace ITG.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { 1, "8d8ba6de-af72-4172-b1ec-48e2214d33c7", "Admin", "ADMIN" },
-                    { 2, "2a653dd7-a6ae-4470-a972-dbd6b5a4598c", "PoweUser", "POWERUSER" }
+                    { 1, "bf783d8e-da7a-4858-b98c-1f1d6eb0c4c0", "Admin", "ADMIN" },
+                    { 2, "ce0d5b72-364c-42b1-9be0-2f762351b9f6", "PoweUser", "POWERUSER" }
                 });
 
             migrationBuilder.InsertData(
@@ -345,8 +345,8 @@ namespace ITG.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Picture", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { 1, 0, "fe0f8182-a2fc-435e-81c2-dd27acd5614d", "adminuser@kocaeli.edu.tr", true, false, null, "ADMINUSER@KOCAELI.EDU.TR", "ADMINUSER", "AQAAAAEAACcQAAAAEMrE24mzf6KQNbdW0uJmtoEl1UqxdS1nRJMyI2c0DtN5vp+rhIRw84HI1+D17OOiEA==", "+905553332211", true, "defaultUser.png", "e7f4362a-2dd3-4e92-93ce-9d44b591efb8", false, "adminuser" },
-                    { 2, 0, "ddde49dd-430b-4cf5-bf45-6197af6f6b42", "poweruser@kocaeli.edu.tr", true, false, null, "POWERUSER@KOCAELI.EDU.TR", "POWERUSER", "AQAAAAEAACcQAAAAEOYbaDMaxpgndE5EL+G9M0kfdRlWFk4zmhm3BOcF1cRKjlTAm4+fThA5gFk7oRFxaQ==", "+905553332211", true, "defaultUser.png", "522e28a7-96c0-4af9-8704-f8dc3079414f", false, "poweruser" }
+                    { 1, 0, "fee39f8e-7cf1-4df8-90c9-0689e59b9186", "adminuser@kocaeli.edu.tr", true, false, null, "ADMINUSER@KOCAELI.EDU.TR", "ADMINUSER", "AQAAAAEAACcQAAAAEAyQ72S+tnaXg4Bkcj1u/frT33zD8xzN/TRopspfYDEUCfTR7Ygpbdl3U6KXqQH5Ug==", "+905553332211", true, "defaultUser.png", "ebf1e138-de32-4198-af84-33d97922a06d", false, "adminuser" },
+                    { 2, 0, "517d05a7-a4aa-4afb-8a49-4ac29ba249a3", "poweruser@kocaeli.edu.tr", true, false, null, "POWERUSER@KOCAELI.EDU.TR", "POWERUSER", "AQAAAAEAACcQAAAAEErPHn5Oz77j/7L7pg8ETOZEFQmVthkVfYyaAfEsHDg8O9J7Yq2Qbhv1vWuKkRsBMg==", "+905553332211", true, "defaultUser.png", "d98f3fa8-20c1-45a9-9ee2-25a9e7f06a83", false, "poweruser" }
                 });
 
             migrationBuilder.InsertData(
@@ -354,9 +354,9 @@ namespace ITG.Data.Migrations
                 columns: new[] { "Id", "Content", "CreatedByName", "CreatedDate", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Name", "Note", "Thumbnail" },
                 values: new object[,]
                 {
-                    { 1, "Adana, Türkiye'nin bir ili ve en kalabalık altıncı şehridir. 2019 yılı verilerine göre 2.258.718 nüfusa sahiptir. İlin yüz ölçümü 13.844 km²dir. İlde km²ye 160 kişi düşmektedir. 01.02.2018 TÜİK verilerine göre 5'i merkez ilçe olmak üzere toplam 15 ilçesi ve belediyesi vardır. Bu ilçelerde 831 mahalle bulunmaktadır.", "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4132), true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4145), "Adana", "01 Plakalı il Adana.", "Default.jpg" },
-                    { 2, "Adıyaman, aynı isimli ilin merkez ilçesidir. Adıyaman merkez ilçesinin nüfusu 2020 istatistiklerine 310.644'dür. ", "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4157), true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4158), "Adıyaman", "02 Plakalı il Adıyaman.", "Default.jpg" },
-                    { 3, "Afyonkarahisar veya eski ve halk arasındaki ismiyle Afyon, aynı isimli ilin merkezidir. Mermercilik ve gıda sektöründe Türkiye içinde ve dışında isim yapmıştır. Şehrin Afyon olan ismi, 2005 yılında Afyonkarahisar olarak değiştirilmiştir. ", "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4162), true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4163), "Afyon", "03 Plakalı il Afyon.", "Default.jpg" }
+                    { 1, "Adana, Türkiye'nin bir ili ve en kalabalık altıncı şehridir. 2019 yılı verilerine göre 2.258.718 nüfusa sahiptir. İlin yüz ölçümü 13.844 km²dir. İlde km²ye 160 kişi düşmektedir. 01.02.2018 TÜİK verilerine göre 5'i merkez ilçe olmak üzere toplam 15 ilçesi ve belediyesi vardır. Bu ilçelerde 831 mahalle bulunmaktadır.", "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2693), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2703), "Adana", "01 Plakalı il Adana.", "Default.jpg" },
+                    { 2, "Adıyaman, aynı isimli ilin merkez ilçesidir. Adıyaman merkez ilçesinin nüfusu 2020 istatistiklerine 310.644'dür. ", "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2714), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2715), "Adıyaman", "02 Plakalı il Adıyaman.", "Default.jpg" },
+                    { 3, "Afyonkarahisar veya eski ve halk arasındaki ismiyle Afyon, aynı isimli ilin merkezidir. Mermercilik ve gıda sektöründe Türkiye içinde ve dışında isim yapmıştır. Şehrin Afyon olan ismi, 2005 yılında Afyonkarahisar olarak değiştirilmiştir. ", "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2719), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2720), "Afyon", "03 Plakalı il Afyon.", "Default.jpg" }
                 });
 
             migrationBuilder.InsertData(
@@ -373,25 +373,40 @@ namespace ITG.Data.Migrations
                 columns: new[] { "Id", "CityId", "CreatedByName", "CreatedDate", "Description", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Name", "Note" },
                 values: new object[,]
                 {
-                    { 1, 1, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(6983), "Yemek yenilebilecek yerler ile ilgili oluşturulmuş kategoridir.", true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7457), "Yemek", "Yemek Turist Rehberi Kategorisi" },
-                    { 2, 1, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7919), "Müze ve tarihsel yerler için oluşturulmuş kategoridir.", true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7920), "Tarihi Gezi", "Tarihi Gezi Turist Rehberi Kategorisi" },
-                    { 3, 1, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7925), "Doğal Parklar için oluşturulmuş kategoridir.", true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7926), "Doğa Gezisi", "Doğal Parklar Turist Rehberi Kategorisi" }
+                    { 1, 1, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5715), "Yemek yenilebilecek yerler ile ilgili oluşturulmuş kategoridir.", true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5725), "Yemek", "Yemek Turist Rehberi Kategorisi" },
+                    { 2, 1, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5737), "Müze ve tarihsel yerler için oluşturulmuş kategoridir.", true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5738), "Tarihi Gezi", "Tarihi Gezi Turist Rehberi Kategorisi" },
+                    { 3, 1, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5742), "Doğal Parklar için oluşturulmuş kategoridir.", true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5743), "Doğa Gezisi", "Doğal Parklar Turist Rehberi Kategorisi" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Places",
                 columns: new[] { "Id", "Address", "CategoryId", "CityId", "CreatedByName", "CreatedDate", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Name", "Note", "PlacePicture" },
-                values: new object[] { 1, "Adana Merkez,Adana Kebapçısı", 1, 1, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 110, DateTimeKind.Local).AddTicks(9904), true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 110, DateTimeKind.Local).AddTicks(9921), "Adana Kebapçısı", "Adana'da yer alan kebapçı", "Default.jpg" });
+                values: new object[] { 1, "Adana Merkez,Adana Kebapçısı", 1, 1, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(8914), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(8928), "Adana Kebapçısı", "Adana'da yer alan kebapçı", "Default.jpg" });
 
             migrationBuilder.InsertData(
                 table: "Places",
                 columns: new[] { "Id", "Address", "CategoryId", "CityId", "CreatedByName", "CreatedDate", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Name", "Note", "PlacePicture" },
-                values: new object[] { 2, "Adıyaman Ev Yemekler, Merkez-Adıyaman", 1, 2, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(370), true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(371), "Adıyaman Ev Yemekleri", "Adıyaman'da faaliyer gösteren ev yemekleri restoranı.", "Default.jpg" });
+                values: new object[] { 2, "Adıyaman Ev Yemekler, Merkez-Adıyaman", 1, 2, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9385), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9386), "Adıyaman Ev Yemekleri", "Adıyaman'da faaliyer gösteren ev yemekleri restoranı.", "Default.jpg" });
 
             migrationBuilder.InsertData(
                 table: "Places",
                 columns: new[] { "Id", "Address", "CategoryId", "CityId", "CreatedByName", "CreatedDate", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Name", "Note", "PlacePicture" },
-                values: new object[] { 3, "Adana Varda Köprüsü,Merkez Adana", 2, 3, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(375), true, false, "InitialCreate", new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(376), "Adana Varda Köprüsü", "Adana'da bulunan tarihi Varda Köprüsü.", "Default.jpg" });
+                values: new object[] { 3, "Adana Varda Köprüsü,Merkez Adana", 2, 3, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9390), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9392), "Adana Varda Köprüsü", "Adana'da bulunan tarihi Varda Köprüsü.", "Default.jpg" });
+
+            migrationBuilder.InsertData(
+                table: "Articles",
+                columns: new[] { "Id", "CategoryId", "CityId", "CommentCount", "Content", "CreatedByName", "CreatedDate", "Date", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Note", "PlaceId", "SeoAuthor", "SeoDescription", "SeoTags", "Thumbnail", "Title", "UserId", "ViewCount" },
+                values: new object[] { 1, 1, 1, 1, "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.", "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(6343), new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(5461), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(6799), "Adana Yemek Kültürü Tanıtımı", 1, "Yusuf Karaman", "Adana Yemek Kültürü", "Adana, Kebap, Yemek", "Default.jpg", "Adana Yemek Kültürü", 1, 100 });
+
+            migrationBuilder.InsertData(
+                table: "Articles",
+                columns: new[] { "Id", "CategoryId", "CityId", "CommentCount", "Content", "CreatedByName", "CreatedDate", "Date", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Note", "PlaceId", "SeoAuthor", "SeoDescription", "SeoTags", "Thumbnail", "Title", "UserId", "ViewCount" },
+                values: new object[] { 2, 1, 2, 1, "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.", "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7891), new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7889), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7892), "Adıyaman Yemek Kültürü Tanıtımı", 2, "Yusuf Karaman", "Adıyaman Yemek Kültürü", "Adıyaman, Kebap, Yemek", "Default.jpg", "Adıyaman Yemek Kültürü", 1, 100 });
+
+            migrationBuilder.InsertData(
+                table: "Articles",
+                columns: new[] { "Id", "CategoryId", "CityId", "CommentCount", "Content", "CreatedByName", "CreatedDate", "Date", "IsActive", "IsDeleted", "ModifiedByName", "ModifiedDate", "Note", "PlaceId", "SeoAuthor", "SeoDescription", "SeoTags", "Thumbnail", "Title", "UserId", "ViewCount" },
+                values: new object[] { 3, 2, 1, 1, "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.", "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7898), new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7897), true, false, "InitialCreate", new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7899), "Adana Tarihi Mekanlar Tanıtımı", 3, "Yusuf Karaman", "Adana Tarihi Yerler", "Adana, Kültür,Tarih,Vanda,Kebap", "Default.jpg", "Adana Tarihi Yerler", 1, 100 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Articles_CategoryId",

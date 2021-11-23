@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITG.Data.Migrations
 {
     [DbContext(typeof(ITGContext))]
-    [Migration("20211116192631_InitialCreate")]
+    [Migration("20211123014509_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -115,6 +115,80 @@ namespace ITG.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Articles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            CityId = 1,
+                            CommentCount = 1,
+                            Content = "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.",
+                            CreatedByName = "InitialCreate",
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(6343),
+                            Date = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(5461),
+                            IsActive = true,
+                            IsDeleted = false,
+                            ModifiedByName = "InitialCreate",
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(6799),
+                            Note = "Adana Yemek Kültürü Tanıtımı",
+                            PlaceId = 1,
+                            SeoAuthor = "Yusuf Karaman",
+                            SeoDescription = "Adana Yemek Kültürü",
+                            SeoTags = "Adana, Kebap, Yemek",
+                            Thumbnail = "Default.jpg",
+                            Title = "Adana Yemek Kültürü",
+                            UserId = 1,
+                            ViewCount = 100
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 1,
+                            CityId = 2,
+                            CommentCount = 1,
+                            Content = "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.",
+                            CreatedByName = "InitialCreate",
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7891),
+                            Date = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7889),
+                            IsActive = true,
+                            IsDeleted = false,
+                            ModifiedByName = "InitialCreate",
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7892),
+                            Note = "Adıyaman Yemek Kültürü Tanıtımı",
+                            PlaceId = 2,
+                            SeoAuthor = "Yusuf Karaman",
+                            SeoDescription = "Adıyaman Yemek Kültürü",
+                            SeoTags = "Adıyaman, Kebap, Yemek",
+                            Thumbnail = "Default.jpg",
+                            Title = "Adıyaman Yemek Kültürü",
+                            UserId = 1,
+                            ViewCount = 100
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 2,
+                            CityId = 1,
+                            CommentCount = 1,
+                            Content = "Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.",
+                            CreatedByName = "InitialCreate",
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7898),
+                            Date = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7897),
+                            IsActive = true,
+                            IsDeleted = false,
+                            ModifiedByName = "InitialCreate",
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 386, DateTimeKind.Local).AddTicks(7899),
+                            Note = "Adana Tarihi Mekanlar Tanıtımı",
+                            PlaceId = 3,
+                            SeoAuthor = "Yusuf Karaman",
+                            SeoDescription = "Adana Tarihi Yerler",
+                            SeoTags = "Adana, Kültür,Tarih,Vanda,Kebap",
+                            Thumbnail = "Default.jpg",
+                            Title = "Adana Tarihi Yerler",
+                            UserId = 1,
+                            ViewCount = 100
+                        });
                 });
 
             modelBuilder.Entity("ITG.Entities.Concrete.Category", b =>
@@ -174,12 +248,12 @@ namespace ITG.Data.Migrations
                             Id = 1,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(6983),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5715),
                             Description = "Yemek yenilebilecek yerler ile ilgili oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7457),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5725),
                             Name = "Yemek",
                             Note = "Yemek Turist Rehberi Kategorisi"
                         },
@@ -188,12 +262,12 @@ namespace ITG.Data.Migrations
                             Id = 2,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7919),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5737),
                             Description = "Müze ve tarihsel yerler için oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7920),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5738),
                             Name = "Tarihi Gezi",
                             Note = "Tarihi Gezi Turist Rehberi Kategorisi"
                         },
@@ -202,12 +276,12 @@ namespace ITG.Data.Migrations
                             Id = 3,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7925),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5742),
                             Description = "Doğal Parklar için oluşturulmuş kategoridir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 103, DateTimeKind.Local).AddTicks(7926),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 389, DateTimeKind.Local).AddTicks(5743),
                             Name = "Doğa Gezisi",
                             Note = "Doğal Parklar Turist Rehberi Kategorisi"
                         });
@@ -270,11 +344,11 @@ namespace ITG.Data.Migrations
                             Id = 1,
                             Content = "Adana, Türkiye'nin bir ili ve en kalabalık altıncı şehridir. 2019 yılı verilerine göre 2.258.718 nüfusa sahiptir. İlin yüz ölçümü 13.844 km²dir. İlde km²ye 160 kişi düşmektedir. 01.02.2018 TÜİK verilerine göre 5'i merkez ilçe olmak üzere toplam 15 ilçesi ve belediyesi vardır. Bu ilçelerde 831 mahalle bulunmaktadır.",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4132),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2693),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4145),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2703),
                             Name = "Adana",
                             Note = "01 Plakalı il Adana.",
                             Thumbnail = "Default.jpg"
@@ -284,11 +358,11 @@ namespace ITG.Data.Migrations
                             Id = 2,
                             Content = "Adıyaman, aynı isimli ilin merkez ilçesidir. Adıyaman merkez ilçesinin nüfusu 2020 istatistiklerine 310.644'dür. ",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4157),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2714),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4158),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2715),
                             Name = "Adıyaman",
                             Note = "02 Plakalı il Adıyaman.",
                             Thumbnail = "Default.jpg"
@@ -298,11 +372,11 @@ namespace ITG.Data.Migrations
                             Id = 3,
                             Content = "Afyonkarahisar veya eski ve halk arasındaki ismiyle Afyon, aynı isimli ilin merkezidir. Mermercilik ve gıda sektöründe Türkiye içinde ve dışında isim yapmıştır. Şehrin Afyon olan ismi, 2005 yılında Afyonkarahisar olarak değiştirilmiştir. ",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4162),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2719),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 106, DateTimeKind.Local).AddTicks(4163),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 391, DateTimeKind.Local).AddTicks(2720),
                             Name = "Afyon",
                             Note = "03 Plakalı il Afyon.",
                             Thumbnail = "Default.jpg"
@@ -437,11 +511,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 1,
                             CityId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 110, DateTimeKind.Local).AddTicks(9904),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(8914),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 110, DateTimeKind.Local).AddTicks(9921),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(8928),
                             Name = "Adana Kebapçısı",
                             Note = "Adana'da yer alan kebapçı",
                             PlacePicture = "Default.jpg"
@@ -453,11 +527,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 1,
                             CityId = 2,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(370),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9385),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(371),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9386),
                             Name = "Adıyaman Ev Yemekleri",
                             Note = "Adıyaman'da faaliyer gösteren ev yemekleri restoranı.",
                             PlacePicture = "Default.jpg"
@@ -469,11 +543,11 @@ namespace ITG.Data.Migrations
                             CategoryId = 2,
                             CityId = 3,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(375),
+                            CreatedDate = new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9390),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2021, 11, 16, 22, 26, 31, 111, DateTimeKind.Local).AddTicks(376),
+                            ModifiedDate = new DateTime(2021, 11, 23, 4, 45, 9, 395, DateTimeKind.Local).AddTicks(9392),
                             Name = "Adana Varda Köprüsü",
                             Note = "Adana'da bulunan tarihi Varda Köprüsü.",
                             PlacePicture = "Default.jpg"
@@ -512,14 +586,14 @@ namespace ITG.Data.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "8d8ba6de-af72-4172-b1ec-48e2214d33c7",
+                            ConcurrencyStamp = "bf783d8e-da7a-4858-b98c-1f1d6eb0c4c0",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "2a653dd7-a6ae-4470-a972-dbd6b5a4598c",
+                            ConcurrencyStamp = "ce0d5b72-364c-42b1-9be0-2f762351b9f6",
                             Name = "PoweUser",
                             NormalizedName = "POWERUSER"
                         });
@@ -624,17 +698,17 @@ namespace ITG.Data.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fe0f8182-a2fc-435e-81c2-dd27acd5614d",
+                            ConcurrencyStamp = "fee39f8e-7cf1-4df8-90c9-0689e59b9186",
                             Email = "adminuser@kocaeli.edu.tr",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMINUSER@KOCAELI.EDU.TR",
                             NormalizedUserName = "ADMINUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMrE24mzf6KQNbdW0uJmtoEl1UqxdS1nRJMyI2c0DtN5vp+rhIRw84HI1+D17OOiEA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAyQ72S+tnaXg4Bkcj1u/frT33zD8xzN/TRopspfYDEUCfTR7Ygpbdl3U6KXqQH5Ug==",
                             PhoneNumber = "+905553332211",
                             PhoneNumberConfirmed = true,
                             Picture = "defaultUser.png",
-                            SecurityStamp = "e7f4362a-2dd3-4e92-93ce-9d44b591efb8",
+                            SecurityStamp = "ebf1e138-de32-4198-af84-33d97922a06d",
                             TwoFactorEnabled = false,
                             UserName = "adminuser"
                         },
@@ -642,17 +716,17 @@ namespace ITG.Data.Migrations
                         {
                             Id = 2,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ddde49dd-430b-4cf5-bf45-6197af6f6b42",
+                            ConcurrencyStamp = "517d05a7-a4aa-4afb-8a49-4ac29ba249a3",
                             Email = "poweruser@kocaeli.edu.tr",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "POWERUSER@KOCAELI.EDU.TR",
                             NormalizedUserName = "POWERUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOYbaDMaxpgndE5EL+G9M0kfdRlWFk4zmhm3BOcF1cRKjlTAm4+fThA5gFk7oRFxaQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEErPHn5Oz77j/7L7pg8ETOZEFQmVthkVfYyaAfEsHDg8O9J7Yq2Qbhv1vWuKkRsBMg==",
                             PhoneNumber = "+905553332211",
                             PhoneNumberConfirmed = true,
                             Picture = "defaultUser.png",
-                            SecurityStamp = "522e28a7-96c0-4af9-8704-f8dc3079414f",
+                            SecurityStamp = "d98f3fa8-20c1-45a9-9ee2-25a9e7f06a83",
                             TwoFactorEnabled = false,
                             UserName = "poweruser"
                         });
